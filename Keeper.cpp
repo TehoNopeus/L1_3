@@ -21,11 +21,11 @@ void Keeper::add()
 	int type;
 	try
 	{
-		cout << " Выберите класс /n (1) - Рыбы /n (2) - Птицы  /n (3) - Коты/n";
+		cout << " Выберите класс \n (1) - Рыбы \n (2) - Птицы  \n (3) - Коты\n";
 		cin >> type;
 		while (type > 3 || type < 1) {
 			cout << "Выбрана не верная позиция"<< endl;
-			cout << " Выберите класс /n (1) - Рыбы /n (2) - Птицы  /n (3) - Коты/n";
+			cout << " Выберите класс \n (1) - Рыбы \n (2) - Птицы  \n (3) - Коты\n";
 			cin >> type;
 		}
 		Animal** ctm = new Animal * [size + 1];
@@ -99,7 +99,7 @@ void Keeper::edit()
 	{
 		for (int i = 0; i < size; i++)
 		{
-			cout << "[" << i << "] ";
+			cout << "(" << i << ") ";
 			switch (data[i]->getType())
 			{
 			case 1:
@@ -150,7 +150,7 @@ void Keeper::del()
 	{
 		for (int i = 0; i < size; i++)
 		{
-			cout << "[" << i << "] ";
+			cout << "(" << i << ") ";
 			switch (data[i]->getType())
 			{
 			case 1:
